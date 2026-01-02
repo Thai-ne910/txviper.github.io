@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/icons">
+    <!-- Thêm các file ảnh/icon của bạn ở đây -->
+    <file>icons/product.png</file>
+    <file>icons/order.png</file>
+    <file>icons/payment.png</file>
+  </qresource>
+</RCC>

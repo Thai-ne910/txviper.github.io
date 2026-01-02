@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>900</width><height>700</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ứng Dụng Quản Lý Đặt Đồ Ăn Online</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow {
+    background-color: #f5f5f5;
+}
+QLabel#lbl_header {
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+}
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+QPushButton#btn_product { background-color: #2ecc71; }
+QPushButton#btn_product:hover { background-color: #27ae60; }
+QPushButton#btn_order { background-color: #e74c3c; }
+QPushButton#btn_order:hover { background-color: #c0392b; }
+QPushButton#btn_order_item { background-color: #9b59b6; }
+QPushButton#btn_order_item:hover { background-color: #8e44ad; }
+QPushButton#btn_payment { background-color: #f39c12; }
+QPushButton#btn_payment:hover { background-color: #d35400; }
+QPushButton#btn_product_sales { background-color: #1abc9c; }
+QPushButton#btn_product_sales:hover { background-color: #16a085; }
+QPushButton#btn_user { background-color: #3498db; }
+QPushButton#btn_user:hover { background-color: #2980b9; }
+
+QTableWidget {
+    background-color: white;
+    alternate-background-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+}
+QTableWidget::item { padding: 5px; }
+QTableWidget QHeaderView::section {
+    background-color: #34495e;
+    color: white;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+QStatusBar, QMenuBar, QMenu {
+    background-color: #34495e;
+    color: white;
+}
+QMenuBar::item {
+    padding: 8px 16px;
+}
+QMenuBar::item:selected, QMenu::item:selected {
+    background-color: #2c3e50;
+}
+QMenu::item:selected {
+    background-color: #3498db;
+}
+QLabel#lbl_user_info {
+    color: #16a085;
+    font-weight: bold;
+}
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing"><number>12</number></property>
+    <property name="leftMargin"><number>15</number></property>
+    <property name="topMargin"><number>15</number></property>
+    <property name="rightMargin"><number>15</number></property>
+    <property name="bottomMargin"><number>15</number></property>
+
+    <item>
+     <widget class="QLabel" name="lbl_header">
+      <property name="font"><font><family>Segoe UI</family><pointsize>18</pointsize><weight>75</weight><bold>true</bold></font></property>
+      <property name="text"><string>Admin Dashboard</string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item><spacer name="horizontalSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+      <item>
+       <widget class="QLabel" name="lbl_user_info">
+        <property name="font"><font><family>Segoe UI</family><pointsize>10</pointsize></font></property>
+        <property name="text"><string>Chưa đăng nhập</string></property>
+        <property name="alignment"><set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_login">
+        <property name="minimumSize"><size><width>120</width><height>0</height></size></property>
+        <property name="font"><font><family>Segoe UI</family><pointsize>10</pointsize></font></property>
+        <property name="text"><string>Đăng nhập</string></property>
+        <property name="icon"><iconset><normaloff>icons/login.png</normaloff>icons/login.png</iconset></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="font"><font><family>Segoe UI</family><pointsize>10</pointsize></font></property>
+      <property name="alternatingRowColors"><bool>true</bool></property>
+      <property name="gridStyle"><enum>Qt::DotLine</enum></property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing"><number>10</number></property>
+      <item><widget class="QPushButton" name="btn_product"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Sản phẩm</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_order"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Đơn hàng</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_order_item"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Chi tiết đơn hàng</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_payment"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Thanh toán</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_product_sales"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Thống kê doanh thu</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_user"><property name="minimumSize"><size><width>0</width><height>50</height></size></property><property name="font"><font><pointsize>10</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Người dùng</string></property></widget></item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>900</width><height>21</height></rect></property>
+   <widget class="QMenu" name="menuFile"><property name="title"><string>Thoát</string></property><addaction name="actionExit"/></widget>
+   <widget class="QMenu" name="menuAdmin"><property name="title"><string>Admin</string></property><addaction name="actionLogin"/><addaction name="actionLogout"/></widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAdmin"/>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"><property name="font"><font><family>Segoe UI</family><pointsize>10</pointsize></font></property></widget>
+
+  <action name="actionExit"><property name="text"><string>Đồng Ý</string></property></action>
+  <action name="actionLogin"><property name="text"><string>Đăng nhập</string></property></action>
+  <action name="actionLogout"><property name="text"><string>Đăng xuất</string></property></action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
